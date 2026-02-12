@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meyve Mancınık Oyunu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game">
+      <h1>🍓 Meyve Mancınık</h1>
+      <p class="subtitle">
+        Makinede meyveyi büyüt, 3 barı fulle, mancınıkla fırlat ve uzaklığa göre puan/para kazan.
+      </p>
+
+      <section class="panel stats">
+        <h2>Durum</h2>
+        <div class="stats-grid">
+          <div>Seviye: <strong id="fruitLevel">1</strong></div>
+          <div>Boyut: <strong id="fruitSize">10</strong></div>
+          <div>Atış Gücü: <strong id="launchPower">0</strong></div>
+          <div>Puan: <strong id="score">0</strong></div>
+          <div>Para: <strong id="money">0</strong></div>
+          <div>En Uzak: <strong id="bestDistance">0</strong> m</div>
+        </div>
+      </section>
+
+      <section class="panel machine">
+        <h2>🧪 Büyütme Makinesi</h2>
+        <p>Makine tuşuna bastıkça meyve büyür ve seviye atlar.</p>
+        <button id="growBtn">Meyveyi Büyüt</button>
+      </section>
+
+      <section class="panel catapult">
+        <h2>🏹 Mancınık Ayarı (3 Bar)</h2>
+        <p>Atış yapabilmek için 3 barın da %100 olması gerekiyor.</p>
+        <div class="bars" id="bars"></div>
+        <button id="chargeBtn">Bar Doldur</button>
+      </section>
+
+      <section class="panel action">
+        <h2>🚀 Atış</h2>
+        <p>İstediğin boyuta gelen meyveyi al ve mancınıkla fırlat.</p>
+        <button id="launchBtn">Fırlat</button>
+        <p id="lastResult">Henüz atış yapılmadı.</p>
+      </section>
+
+      <section class="panel upgrades">
+        <h2>⬆️ Geliştirmeler</h2>
+        <div class="upgrade-row">
+          <span>Makine Geliştirme (büyüme +2):</span>
+          <button id="upgradeMachineBtn">Satın Al (50)</button>
+          <strong id="machineLevel">1</strong>
+        </div>
+        <div class="upgrade-row">
+          <span>Mancınık Geliştirme (+10% mesafe):</span>
+          <button id="upgradeCatapultBtn">Satın Al (75)</button>
+          <strong id="catapultLevel">1</strong>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
